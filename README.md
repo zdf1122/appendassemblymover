@@ -5,7 +5,7 @@
 
 ##### 以下所有文件均在  /public3/home/pg3152/zhangxinyue/crispr/sewing/NuvC_HNH_HD/AppendAssemblyMover 路径下
 
-### 准备segments文件(https://github.com/Raymundo-cj/rosetta-2021_test) ，原pdb结构(1sj7.pdb)，受体pdb (1sj7_t.pdb)，初始结构pdb(1sj7_p.pdb)
+### ①准备segments文件(https://github.com/Raymundo-cj/rosetta-2021_test) ，原pdb结构(1sj7.pdb)，受体pdb (1sj7_t.pdb)，初始结构pdb(1sj7_p.pdb)
 ### ②准备xml文件与flag文件
 
 #### xml文件内容如下  text.xml
