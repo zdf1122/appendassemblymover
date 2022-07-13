@@ -5,11 +5,11 @@
 
 ##### 以下所有文件均在  /public3/home/pg3152/zhangxinyue/crispr/sewing/NuvC_HNH_HD/AppendAssemblyMover 路径下
 
-### ①准备segments文件(https://github.com/Raymundo-cj/rosetta-2021_test) ，原pdb结构(1sj7.pdb)，受体pdb (1sj7_t.pdb)，初始结构pdb(1sj7_p.pdb)
+### ①准备segments文件(https://github.com/Raymundo-cj/rosetta-2021_test) ，受体pdb (1sj7_t.pdb)，初始结构pdb(1sj7_p.pdb)
 ### ②准备xml文件与flag文件
 
 #### xml文件内容如下  text.xml
-
+```
 <ROSETTASCRIPTS>
         <SCOREFXNS>
         </SCOREFXNS>
@@ -41,9 +41,9 @@
                 <Add mover_name="assemble" />
         </PROTOCOLS>
 </ROSETTASCRIPTS>
-
+```
 #### flag文件内容如下
-
+```
 -ignore_unrecognized_res
 -detect_disulf false
 -mh
@@ -56,10 +56,10 @@
         -motifs /public3/home/pg3152/zzl/zzl_softwares/rosetta_src_2021.16.61629_bundle/main/database/additional_protocol_data/sewing/xsmax_bb_ss_AILV_resl0.8_msc0.3/xsmax_bb_ss_AILV_resl0.8_msc0.3.rpm.bin.gz
         -scores_BB_BB /public3/home/pg3152/zzl/zzl_softwares/rosetta_src_2021.16.61629_bundle/main/database/additional_protocol_data/sewing/xsmax_bb_ss_AILV_resl0.8_msc0.3/xsmax_bb_ss_AILV_resl0.8_msc0.3
     -gen_reverse_motifs_on_load false
-    
+```    
 ### ③运行脚本内容
-
+```
 #!/bin/bash
 /public3/home/pg3152/zzl/zzl_softwares/rosetta_src_2021.16.61629_bundle/main/source/bin/rosetta_scripts.linuxgccrelease -s 1sj7_p.pdb -parser:protocol test.xml @flag -nstruct 4 -out:path:pdb output
-
+```
 
